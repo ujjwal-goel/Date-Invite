@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Date</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #fce4ec;
+            color: #6d4c41;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .message {
+            font-size: 1.5em;
+            margin: 20px;
+        }
+        .btn-container {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .yes-btn {
+            background-color: #ff4081;
+            color: white;
+        }
+        .no-btn {
+            background-color: #d3d3d3;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Go on a Date With Me?</h1>
+        <p class="message">An evening of pottery, laughter, and a lovely dinner awaits us.</p>
+        <div class="btn-container">
+            <button class="yes-btn" onclick="alert('Yay! Can’t wait! ❤️')">Yes</button>
+            <button class="no-btn" onmouseover="moveButton(this)">No</button>
+        </div>
+    </div>
+    <script>
+        function moveButton(button) {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
