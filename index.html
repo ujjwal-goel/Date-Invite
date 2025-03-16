@@ -10,9 +10,10 @@
             text-align: center;
             background-color: #fce4ec;
             color: #6d4c41;
+            position: relative;
         }
         .container {
-            margin-top: 100px;
+            margin-top: 50px;
         }
         h1 {
             font-size: 2.5em;
@@ -41,17 +42,45 @@
             color: black;
             position: absolute;
         }
+        .pottery-container {
+            margin-top: 50px;
+        }
+        .pottery-wheel {
+            width: 150px;
+            height: 150px;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .wheel {
+            animation: spin 2s linear infinite;
+            transform-origin: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Will You Go on a Date With Me?</h1>
-        <p class="message">An evening of pottery, laughter, and a lovely dinner awaits us.</p>
+        <h1>Will You Go on a Pottery Date With Me? 🏺❤️</h1>
+        <p class="message">21st March | 6:30 PM | 32nd Avenue</p>
         <div class="btn-container">
             <button class="yes-btn" onclick="alert('Yay! Can’t wait! ❤️')">Yes</button>
             <button class="no-btn" onmouseover="moveButton(this)">No</button>
         </div>
     </div>
+
+    <!-- Animated Pottery Wheel SVG -->
+    <div class="pottery-container">
+        <svg class="pottery-wheel" viewBox="0 0 200 200">
+            <!-- Base -->
+            <ellipse cx="100" cy="160" rx="60" ry="20" fill="#8D6E63"/>
+            <!-- Wheel -->
+            <circle class="wheel" cx="100" cy="120" r="40" fill="#6D4C41"/>
+            <!-- Clay -->
+            <ellipse cx="100" cy="90" rx="25" ry="40" fill="#D2A679"/>
+        </svg>
+    </div>
+
     <script>
         function moveButton(button) {
             const x = Math.random() * (window.innerWidth - 100);
